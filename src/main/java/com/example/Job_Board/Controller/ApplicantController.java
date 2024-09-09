@@ -34,6 +34,12 @@ public class ApplicantController {
         return ResponseEntity.ok(applicantService.allApplicant());
     }
 
+    @GetMapping("/username")
+    public ResponseEntity<List<String>> allApplicantUsername()
+    {
+        return ResponseEntity.ok(applicantService.allApplicantUsername());
+    }
+
     @PostMapping("/login")
     public ResponseEntity<ApplicantDto> login(@RequestBody Applicant applicant)
     {

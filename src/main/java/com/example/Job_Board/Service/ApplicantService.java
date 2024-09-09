@@ -190,6 +190,16 @@ public class ApplicantService {
         return "Error while deleting";
     }
 
+    public List<String> allApplicantUsername() {
+        List<Applicant> applicants = applicantRepository.findAll();
+        List<String> usernames = new ArrayList<>();
+        applicants.forEach(applicant -> {
+            String s = applicant.getUsername();
+            usernames.add(s);
+        });
+        return usernames;
+    }
+
 
     /*public Long findApplicantForEducation(Long id) {
         //Long applicant= educationRepository.findApplicantById(id);

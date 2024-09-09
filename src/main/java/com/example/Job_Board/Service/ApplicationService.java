@@ -41,7 +41,7 @@ public class ApplicationService {
 
 
     public List<ApplicationDtoForApplication> allApplication() {
-        List<Application> applications=applicationRepository.findAll();
+        List<Application> applications=applicationRepository.findAllApplicanDesc();
         List<ApplicationDtoForApplication> applicationDtos=new ArrayList<>();
         convertToDtoForApplication dto = new convertToDtoForApplication();
         applications.forEach(application -> {

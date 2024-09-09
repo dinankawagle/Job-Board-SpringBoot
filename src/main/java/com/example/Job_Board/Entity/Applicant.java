@@ -23,6 +23,7 @@ public class Applicant {
     @NotNull(message = "Please enter your name!!")
     private String fullname;
     @NotNull(message = "Please enter an username!!")
+    @Column(unique = true)
     private String username;
     @NotNull(message = "Please enter a password!!")
     @Size(min = 8, max = 24, message = "Password must be between 8 and 24 characters")

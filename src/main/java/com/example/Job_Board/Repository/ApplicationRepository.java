@@ -15,6 +15,9 @@ public interface ApplicationRepository extends JpaRepository<Application,Long> {
 
     List<Application> findAllApplicationByApplicant(Applicant applicant);
 
+    @Query(value = "select*from application order by id desc",nativeQuery = true)
+    List<Application> findAllApplicanDesc();
+//select*from application order by id desc
 
     /*@Query(value = "select*from application where applicant_id=:id",nativeQuery = true)
     List<Application> allApplications(Long id);*/
