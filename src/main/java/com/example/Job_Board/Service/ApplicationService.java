@@ -10,6 +10,7 @@ import com.example.Job_Board.Repository.JobsRepository;
 import org.springframework.stereotype.Service;
 import com.example.Job_Board.Model.convertToDtoForApplication;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -80,6 +81,7 @@ public class ApplicationService {
             if(application.getStatus()!=null)
             {
                 existingApplication.setStatus(application.getStatus());
+                existingApplication.setSubmitted(LocalDate.now());
             }
             applicationRepository.save(existingApplication);
             return "Success";
