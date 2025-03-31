@@ -16,5 +16,5 @@ public class ApplicationDtoForApplication {
     private String status;
     private LocalDate submitted;
     private JobsDtoForApplication jobs;
-    private ApplicantDtoForApplication applicant;
+    private ApplicantDtoForApplication applicant; //Test
 }
